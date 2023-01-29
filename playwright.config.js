@@ -50,7 +50,7 @@ const config = {
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        headless: false,
+        headless: true,
         ignoreHTTPSErrors: true,
         viewport: { width: 1500, height: 840 }
       },
