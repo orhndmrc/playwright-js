@@ -19,6 +19,24 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
+    - name: Python setup
+      if: always()
+      uses: actions/setup-python@v3
+      with:
+          python-version: '3.x'
+    - name: TestRail CLI upload results
+      if: always()
+      run: |
+          pip install trcli
+          trcli -y \
+            -h https://orhan101.testrail.io/ \
+            --project "Ui Tests" \
+            -u demirci.orhan101@gmail.com \
+            -p Miy.wGW8zuRYpClHCkKo \
+            parse_junit \
+            --title "Automated Tests from GitHub workflow" \
+            --run-description ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} \
+            -f "results.xml"
     - uses: actions/upload-artifact@v3
       if: always()
       with:
