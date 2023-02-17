@@ -3,7 +3,7 @@ import {test, expect} from '@playwright/test'
 import { request } from 'http';
 import PlaywrightDevPage from './playwright-dev-page'
 
-test.describe('Suite', () => {
+
 
   test.beforeEach(async ({ page, request }) => {
     await PlaywrightDevPage.initialize(page)
@@ -30,5 +30,5 @@ test.describe('Suite', () => {
     await expect(page.locator('article')).toContainText('Page Object Model is a common pattern');
   });
 
-});
+
 
