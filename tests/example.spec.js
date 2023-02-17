@@ -11,7 +11,7 @@ import PlaywrightDevPage from './playwright-dev-page'
 
   });
   
-  test('test case 1 - C1', async ({ page }) => {
+  test('test case 1 - C3', async ({ page }) => {
     await PlaywrightDevPage.getStarted();
     await expect(PlaywrightDevPage.tocList).toHaveText([
       `How to install Playwright`,
@@ -25,7 +25,7 @@ import PlaywrightDevPage from './playwright-dev-page'
     ]);
   });
 
-  test('test case 2 - C2', async ({ page }) => {
+  test('test case 2 - C4', async ({ page }) => {
     await PlaywrightDevPage.pageObjectModel();
     await expect(page.locator('article')).toContainText('Page Object Model is a common pattern');
   });
