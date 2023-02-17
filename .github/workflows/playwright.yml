@@ -30,7 +30,7 @@ jobs:
           pip install trcli
           trcli -y \
             -h https://orhan101.testrail.io/ \
-            --project "Ui Tests" \
+            --project "Practice" \
             -u demirci.orhan101@gmail.com \
             -p Miy.wGW8zuRYpClHCkKo \
             parse_junit \
