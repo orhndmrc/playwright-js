@@ -31,6 +31,7 @@ jobs:
           trcli -y \
             -h https://orhan101.testrail.io/ \
             --project "Ui Tests" \
+            --name "Sample" \
             -u demirci.orhan101@gmail.com \
             -p Miy.wGW8zuRYpClHCkKo \
             parse_junit \
