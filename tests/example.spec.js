@@ -11,7 +11,7 @@ test.describe('Suite', () => {
 
   });
   
-  test('getting started should contain table of contents', async ({ page }) => {
+  test('test case 1 - C1', async ({ page }) => {
     await PlaywrightDevPage.getStarted();
     await expect(PlaywrightDevPage.tocList).toHaveText([
       `How to install Playwright`,
@@ -25,7 +25,7 @@ test.describe('Suite', () => {
     ]);
   });
 
-  test('should show Page Object Model article', async ({ page }) => {
+  test('test case 2 - C2', async ({ page }) => {
     await PlaywrightDevPage.pageObjectModel();
     await expect(page.locator('article')).toContainText('Page Object Model is a common pattern');
   });
