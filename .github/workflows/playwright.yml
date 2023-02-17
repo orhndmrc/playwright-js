@@ -31,12 +31,10 @@ jobs:
           trcli -y \
             -h https://orhan101.testrail.io/ \
             --project "Ui Tests" \
-            --suite-id 1 \
             -u demirci.orhan101@gmail.com \
             -p Miy.wGW8zuRYpClHCkKo \
             parse_junit \
             --title "Automated Tests from GitHub workflow" \
-            --run-description ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} \
             -f "results.xml"
     - uses: actions/upload-artifact@v3
       if: always()
