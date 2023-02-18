@@ -50,6 +50,10 @@ jobs:
       if: always()
       run: allure generate my-allure-results -o allure-report --clean
       
+    - name: Open allure Report
+      if: always()
+      run: allure open allure-report
+      
 #     - name: Python setup
 #       if: always()
 #       uses: actions/setup-python@v4
