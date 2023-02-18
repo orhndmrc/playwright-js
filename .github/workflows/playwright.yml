@@ -43,17 +43,17 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npm test
-    - name: Python setup
-      if: always()
-      uses: actions/setup-python@v4
-      with:
-          python-version: '3.10'
-    - name: Update pip
-      if: always()
-      run: pip install --upgrade pip
-    - name: Send Test Report to Slack
-      if: always()
-      run: npm run slack
+#     - name: Python setup
+#       if: always()
+#       uses: actions/setup-python@v4
+#       with:
+#           python-version: '3.10'
+#     - name: Update pip
+#       if: always()
+#       run: pip install --upgrade pip
+#     - name: Send Test Report to Slack
+#       if: always()
+#       run: npm run slack
  
 #     - name: TestRail CLI upload results
 #       if: always()
