@@ -35,7 +35,7 @@ test('test case 3 - C3', async ({ page }) => {
 });
 
 test('test case 4 - C4', async ({ page }) => {
-  expect("orhan".startsWith(o)).toBe(true);
+  expect("orhan".startsWith("o")).toBe(true);
 });
 
 test('test case 5 - C5', async ({ page }) => {
