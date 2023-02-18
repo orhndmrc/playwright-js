@@ -4,12 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test"
+    "test": "npx playwright test tests/example.spec.js",
+    "slack": "npx playwright test tests/slack.spec.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.30.0"
+  },
+  "dependencies": {
+    "@slack/types": "^2.8.0",
+    "axios": "^1.3.3",
+    "junit-testrail-reporter": "^1.3.0",
+    "playwright-slack-report": "^1.1.0"
   }
 }
