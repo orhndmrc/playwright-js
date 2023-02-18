@@ -46,9 +46,9 @@ jobs:
     - name: Run Playwright tests
       run: npm test
       
-#     - name: Generate allure Report
-#       if: always()
-#       run: allure generate my-allure-results -o allure-report --clean
+    - name: Generate allure Report
+      if: always()
+      run: allure generate allure-results -o allure-report --clean
       
 #     - name: Open allure Report
 #       if: always()
@@ -84,46 +84,46 @@ jobs:
 #         name: playwright-report
 #         path: playwright-report/
 #         retention-days: 30
-#     - uses: actions/upload-artifact@v3
-#       if: always()
-#       with:
-#         name: allure-report
-#         path: allure-report/
-#         retention-days: 30
-#     - name: Setup Pages
-#       uses: actions/configure-pages@v2
-#       if: always()
-#     - name: Upload artifact
-#       uses: actions/upload-pages-artifact@v1.0.7
-#       if: always()
-#       with:
-#           path: allure-report/
-#     - name: Deploy Playwright result to Github Pages
-#       id: deployment
-#       uses: actions/deploy-pages@v1.2.4
-#       if: always()
-    - name: Get Allure history
-      uses: actions/checkout@v2
+    - uses: actions/upload-artifact@v3
       if: always()
-      continue-on-error: true
       with:
-          ref: gh-pages
-          path: gh-pages
-
-    - name: Allure Report action from marketplace
-      uses: simple-elf/allure-report-action@master
+        name: allure-report
+        path: allure-report/
+        retention-days: 30
+    - name: Setup Pages
+      uses: actions/configure-pages@v2
       if: always()
-      id: allure-report
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1.0.7
+      if: always()
       with:
-          allure_results: allure-results
-          gh_pages: gh-pages
-          allure_report: allure-report
-          allure_history: allure-history
-
-    - name: Deploy report to Github Pages
+          path: allure-report/
+    - name: Deploy Playwright result to Github Pages
+      id: deployment
+      uses: actions/deploy-pages@v1.2.4
       if: always()
-      uses: peaceiris/actions-gh-pages@v2
-      env:
-          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history
+#     - name: Get Allure history
+#       uses: actions/checkout@v2
+#       if: always()
+#       continue-on-error: true
+#       with:
+#           ref: gh-pages
+#           path: gh-pages
+
+#     - name: Allure Report action from marketplace
+#       uses: simple-elf/allure-report-action@master
+#       if: always()
+#       id: allure-report
+#       with:
+#           allure_results: allure-results
+#           gh_pages: gh-pages
+#           allure_report: allure-report
+#           allure_history: allure-history
+
+#     - name: Deploy report to Github Pages
+#       if: always()
+#       uses: peaceiris/actions-gh-pages@v2
+#       env:
+#           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#           PUBLISH_BRANCH: gh-pages
+#           PUBLISH_DIR: allure-history
