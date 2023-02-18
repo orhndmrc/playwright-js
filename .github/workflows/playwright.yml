@@ -39,6 +39,8 @@ jobs:
         node-version: 16
     - name: Install dependencies
       run: npm install --force
+    - name: Install Allure Command Line
+      run: npm install -g allure-commandline --force
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
