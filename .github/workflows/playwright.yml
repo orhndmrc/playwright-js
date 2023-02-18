@@ -84,7 +84,7 @@ jobs:
       if: always()
       with:
         name: allure-report
-        path: allure-report/index.html
+        path: allure-report/
         retention-days: 30
     - name: Setup Pages
       uses: actions/configure-pages@v2
@@ -93,7 +93,7 @@ jobs:
       uses: actions/upload-pages-artifact@v1.0.7
       if: always()
       with:
-          path: allure-report/index.html
+          path: allure-report/
     - name: Deploy Playwright result to Github Pages
       id: deployment
       uses: actions/deploy-pages@v1.2.4
