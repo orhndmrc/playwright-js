@@ -46,9 +46,9 @@ jobs:
     - name: Run Playwright tests
       run: npm test
       
-    - name: Generate allure Report
-      if: always()
-      run: allure generate my-allure-results -o allure-report --clean
+#     - name: Generate allure Report
+#       if: always()
+#       run: allure generate my-allure-results -o allure-report --clean
       
 #     - name: Open allure Report
 #       if: always()
