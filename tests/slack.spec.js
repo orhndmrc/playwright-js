@@ -86,7 +86,7 @@ test('Send results to slack', async ({ page }) => {
     };
     //console.log(slackPayload())
     const config = {
-      url: 'https://hooks.slack.com/services/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',
+      url: 'https://hooks.slack.com/services/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',
       method: 'post',
       data: slackPayload(),
     };
