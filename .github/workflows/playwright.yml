@@ -45,7 +45,9 @@ jobs:
       run: npm test
       
     - name: Generate allure Report
+      if: always()
       run: allure generate my-allure-results -o allure-report --clean
+      
 #     - name: Python setup
 #       if: always()
 #       uses: actions/setup-python@v4
