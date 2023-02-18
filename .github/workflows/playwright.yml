@@ -18,7 +18,9 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npm test
+    - name: Send Test Report to Slack
+      run: npm run slack
 #     - name: Python setup
 #       if: always()
 #       uses: actions/setup-python@v4
