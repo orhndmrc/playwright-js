@@ -31,14 +31,14 @@ test('test case 2 - C2', async ({ page }) => {
 });
 
 test('test case 3 - C3', async ({ page }) => {
-  expect(1+4).toBe(6);
+  expect(1+4).toBe(5);
 });
 
 test('test case 4 - C4', async ({ page }) => {
-  expect("orhan".startsWith(d)).toBe(true);
+  expect("orhan".startsWith(o)).toBe(true);
 });
 
-test.skip('test case 5 - C5', async ({ page }) => {
+test('test case 5 - C5', async ({ page }) => {
   console.log('helloworld!')
 });
 
