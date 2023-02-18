@@ -17,6 +17,8 @@
     "@slack/types": "^2.8.0",
     "axios": "^1.3.3",
     "junit-testrail-reporter": "^1.3.0",
-    "playwright-slack-report": "^1.1.0"
+    "playwright-slack-report": "^1.1.0",
+    "allure-commandline": "^2.21.0",
+    "allure-playwright": "^2.0.0"
   }
 }
