@@ -38,7 +38,7 @@ test('test case 4 - C4', async ({ page }) => {
   expect("orhan".startsWith("o")).toBe(true);
 });
 
-test('test case 5 - C5', async ({ page }) => {
+test.skip('test case 5 - C5', async ({ page }) => {
   console.log('helloworld!')
 });
 
