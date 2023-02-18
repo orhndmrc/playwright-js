@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sat Feb 18 18:33:19 GMT 2023","Sat Feb 18 18:33:20 GMT 2023","962","chromium","","","","","test case 2 - C2",""
+"passed","Sat Feb 18 18:33:18 GMT 2023","Sat Feb 18 18:33:19 GMT 2023","1100","chromium","","","","","test case 1 - C1",""
+"skipped","Sat Feb 18 18:33:27 GMT 2023","Sat Feb 18 18:33:27 GMT 2023","2","chromium","","","","","test case 5 - C5",""
+"failed","Sat Feb 18 18:33:26 GMT 2023","Sat Feb 18 18:33:26 GMT 2023","568","chromium","","","","","test case 4 - C4",""
+"failed","Sat Feb 18 18:33:22 GMT 2023","Sat Feb 18 18:33:23 GMT 2023","575","chromium","","","","","test case 3 - C3",""
