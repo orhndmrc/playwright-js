@@ -43,6 +43,9 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npm test
+      
+    - name: Generate allure Report
+      run: allure generate my-allure-results -o allure-report --clean
 #     - name: Python setup
 #       if: always()
 #       uses: actions/setup-python@v4
@@ -73,6 +76,12 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: allure-report
+        path: allure-report/index.html
+        retention-days: 30
     - name: Setup Pages
       uses: actions/configure-pages@v2
       if: always()
@@ -80,7 +89,7 @@ jobs:
       uses: actions/upload-pages-artifact@v1.0.7
       if: always()
       with:
-          path: playwright-report/
+          path: allure-report/index.html
     - name: Deploy Playwright result to Github Pages
       id: deployment
       uses: actions/deploy-pages@v1.2.4
