@@ -50,6 +50,10 @@ jobs:
       if: always()
       run: allure generate allure-results -o allure-report --clean
       
+    - name: Send test results to Slack
+      if: always()
+      run: node tests/slack.js
+      
 #     - name: Open allure Report
 #       if: always()
 #       run: allure open allure-report
