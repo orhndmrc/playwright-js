@@ -82,7 +82,7 @@ let slackPayload = function (testEnv = 'stage') {
     body.blocks.push({ type: 'divider' });
     body.blocks.push({
         type: 'section',
-        text: { type: 'mrkdwn', text: `:checkered_flag:*Total - Passed:grin:: ${passed}, Failed😭: ${failed}, Skipped:face_with_monocle:: ${skipped}*` }
+        text: { type: 'mrkdwn', text: `:checkered_flag:*Total - Passed:grin:: ${passed} | Failed😭: ${failed} | Skipped:face_with_monocle:: ${skipped}*` }
     })
     body.blocks.push({ type: 'divider' });
     return body;
