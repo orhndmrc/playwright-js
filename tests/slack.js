@@ -88,9 +88,17 @@ let slackPayload = function (testEnv = 'stage') {
     return body;
 };
 //console.log(slackPayload())
-const config = {
-    url: 'https://hooks.slack.com/services/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',
-    method: 'post',
-    data: slackPayload(),
-};
-axios(config).catch((e) => console.log('Slack Api Error -> ', e.message));
+// const config = {
+//     url: 'https://hooks.slack.com/services/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',
+//     method: 'post',
+//     data: slackPayload(),
+// };
+//axios(config).catch((e) => console.log('Slack Api Error -> ', e.message));
+const jsonString = JSON.stringify(slackPayload())
+fs.writeFile('./result.json', jsonString, err => {
+    if (err) {
+        console.log('Error writing file', err)
+    } else {
+        console.log('Successfully wrote file')
+    }
+})
