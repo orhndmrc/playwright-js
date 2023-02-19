@@ -64,7 +64,7 @@ jobs:
             "foo": "bar"
            }
   env:
-    SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
+    SLACK_WEBHOOK_URL: "https://hooks.slack.com/services/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"
 
 
       
@@ -102,7 +102,7 @@ jobs:
 #         name: playwright-report
 #         path: playwright-report/
 #         retention-days: 30
-    - uses: actions/upload-artifact@v3
+   - uses: actions/upload-artifact@v3
       if: always()
       with:
         name: allure-report
