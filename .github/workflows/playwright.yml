@@ -50,9 +50,9 @@ jobs:
       if: always()
       run: allure generate allure-results -o allure-report --clean
       
-#     - name: Send test results to Slack
-#       if: always()
-#       run: node tests/slack.js
+    - name: Create Json report
+      if: always()
+      run: node tests/slack.js
     
 
 
@@ -138,10 +138,6 @@ jobs:
       id: slack
       uses: slackapi/slack-github-action@v1.23.0
       with:
-    # This data can be any valid JSON from a previous step in the GitHub Action
-       payload: |
-        {
-        "text": "value"
-        }
+         payload-file-path: "./result.json"
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
