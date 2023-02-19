@@ -134,3 +134,15 @@ jobs:
 #           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #           PUBLISH_BRANCH: gh-pages
 #           PUBLISH_DIR: allure-history
+    - name: Send custom JSON data to Slack workflow
+      id: slack
+      uses: slackapi/slack-github-action@v1.23.0
+      with:
+    # This data can be any valid JSON from a previous step in the GitHub Action
+       payload: |
+        {
+        "key": "value",
+        "foo": "bar"
+        }
+        env:
+          SLACK_WEBHOOK_URL: "https://hooks.slack.com/services/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"
